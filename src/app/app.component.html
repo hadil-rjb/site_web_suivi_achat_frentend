@@ -1,0 +1,27 @@
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+  <button mat-icon-button (click)="opened=!opened" class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Application de suivi achat direct</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav [(opened)]="opened" mode="side" >
+    <mat-list role="list">
+      <mat-list-item role="listitem"><a mat-raised-button routerLink="">Home</a></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem"><a mat-raised-button routerLink="/Achats">Les achats</a></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item role="listitem"><a mat-raised-button routerLink="/Tableau">Tableau</a></mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content >
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
